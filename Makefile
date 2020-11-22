@@ -1,6 +1,10 @@
-.PHONY: clean all
+.PHONY: clean all test
 
-all: README.html
+all: README.html test
+
+test: tests/test_LaTeXDatax.py LaTeXDatax/datax.py
+	pip install .
+	python $<
 
 README.html : README.md
 	md2html --github $< -o $@

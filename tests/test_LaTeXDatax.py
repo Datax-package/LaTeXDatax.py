@@ -25,10 +25,6 @@ class TestDatax(unittest.TestCase):
 \\pgfkeyssetvalue{/datax/d}{\\SI{3.1}{\\meter}}
 \\pgfkeyssetvalue{/datax/e}{\\num{3.1}}
 """
-        print("written:")
-        print(written)
-        print("target:")
-        print(target)
         self.assertEqual(written,target)
 
 if __name__ == '__main__':
