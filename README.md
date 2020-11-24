@@ -3,7 +3,9 @@ Import calculated values from a python script into a LaTeX document.
 This is a python interface for [the datax LaTeX package [ctan]](https://ctan.org/pkg/datax).
 
 ## Installation
-One method that works, though it may not be *the way* in python, is downloading the repo, and running `pip install .` in the root directory of it.
+```
+pip install "LaTeXDatax"
+```
 
 ## Usage
 In a python script:
@@ -30,6 +32,5 @@ In the LaTeX document:
 ```
 
 ## Looking for contributors
-I don't know python very well. This should be a working package, but it would probably be better in more comfortable hands.
-Specifically, I'm not sure how to distribute packages in the python ecosystem.
+I don't know python very well. This package works, but if you have ideas for how to improve it, or you spot some python faux pas, feel free to make a PR or get in touch!
 

@@ -1,3 +1,6 @@
 README.html
 *.tex
 __pycache__
+LaTeXDatax.egg-info/
+build/
+dist/
