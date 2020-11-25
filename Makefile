@@ -12,7 +12,7 @@ test: tests/test_LaTeXDatax.py LaTeXDatax/datax.py
 README.html : README.md
 	md2html --github $< -o $@
 
-publish : dist/
+publish : clean dist/
 	python -m twine upload dist/*
 
 clean :
