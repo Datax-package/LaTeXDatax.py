@@ -1,6 +1,7 @@
 import unittest, io
 
 from LaTeXDatax import printvariables
+from pint import Quantity
 
 class TestDatax(unittest.TestCase):
     def test_datax(self):
@@ -14,6 +15,7 @@ class TestDatax(unittest.TestCase):
                 c = (3.141592,"\\meter"),
                 d = (3.141592,"\\meter","%.2g"),
                 e = (3.141592,"%.2g"),
+                f = Quantity(3.141592,"\\meter"),
                 )
         f.seek(0)
         written = f.read()
@@ -24,6 +26,7 @@ class TestDatax(unittest.TestCase):
 \\pgfkeyssetvalue{/datax/c}{\\SI{3.142}{\\meter}}
 \\pgfkeyssetvalue{/datax/d}{\\SI{3.1}{\\meter}}
 \\pgfkeyssetvalue{/datax/e}{\\num{3.1}}
+\\pgfkeyssetvalue{/datax/f}{\\SI[]{3.141592}{\\meter}}
 """
         self.assertEqual(written,target)
 
