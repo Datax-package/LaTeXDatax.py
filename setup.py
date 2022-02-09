@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setup(
         name='LaTeXDatax',
-        version='1.2',
+        version='1.3',
         author='David Gustavsson',
         author_email='david.e.gustavsson@gmail.com',
         description='Export individual data from a Python script to a LaTeX document',

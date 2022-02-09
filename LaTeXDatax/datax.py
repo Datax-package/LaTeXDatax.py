@@ -17,12 +17,12 @@ def printvariable(tag,variable,f):
         (number, unit, format),
         (number, unit) or
         (number, format);
-        which will be wrapped in siunitx's `\\SI` or `\\num`.
+        which will be wrapped in siunitx's `\\qty` or `\\num`.
 
         number :
             the numeric value of the variable
         unit : str
-            a string on `\\SI` format, so `\\joule\\per\\meter\\cubed`
+            a string on `\\qty` format, so `\\joule\\per\\meter\\cubed`
         format : str
             a C-style format string for the number, by default `%.4g`
 
@@ -63,7 +63,7 @@ def printvariable(tag,variable,f):
         formatstring = '\\pgfkeyssetvalue{/datax/%s}{\\num{'+form+'}}' 
         print(formatstring%(tag,number),file=f)
         return
-    formatstring = '\\pgfkeyssetvalue{/datax/%s}{\\SI{'+form+'}{%s}}'
+    formatstring = '\\pgfkeyssetvalue{/datax/%s}{\\qty{'+form+'}{%s}}'
     print(formatstring%(tag,number,unit),file=f)
 
 def printvariables(filename,**variables):
