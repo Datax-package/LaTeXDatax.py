@@ -33,6 +33,19 @@ In the LaTeX document:
 \end{document}
 ```
 
+If you want to save a dictionary of variables, you can use the double splat
+operator:
+```python
+variables = {
+		"a" : "Literal string",
+		"b" : 3.141592,
+		"c" : (3.141592,"\\meter"),
+		"d" : (3.141592,"\\meter","%.2g"),
+		"e" : (3.141592,"%.2g"),
+    }
+datax(filename="data.tex", **variables) # Note the asterisks
+```
+
 ## Pint integration
 ```python
 from pint import Quantity
